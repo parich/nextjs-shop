@@ -1,0 +1,24 @@
+# vs code
+-  Deprecated] Bracket Pair Colorizer 2
+-  ES7+ React/Redux/React-Native snippets
+-  ESLint
+-  JavaScript (ES6) code snippets
+-  Prettier - Code formatter
+   
+   set : setting.jsot กด commend+ship+p
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "prettier.singleQuote": true
+
+#nvm (Node Version Manager)
+- nvm ls-remote คำสั่งนี้เป็นการแสดงเวอร์ชัน node.js ออกมาทางหน้าจอ
+- nvm install <version> คำสั่งนี้จะเป็นดาวน์โหลด node และ dependencies
+- nvm use <node version> คำสั่งนี้เป็นการใช้ node version ใดใดก็ตามที่อยู่ในเครื่อง
+
+
+# created nextjs
+- npx create-next-app
+- npm run dev
+
+# material ui
+- npm install @mui/material @emotion/react @emotion/styled
