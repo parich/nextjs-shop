@@ -5,7 +5,7 @@ import React from 'react';
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="th">
         <Head>
           <link
             rel="stylesheet"
