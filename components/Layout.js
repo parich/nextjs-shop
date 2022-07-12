@@ -7,11 +7,11 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Container } from '@mui/material';
+import { Container, Link } from '@mui/material';
 import useStyles from '../utils/styles';
+import NextLink from 'next/link';
 
 export default function Layout({ children }) {
-  
   const classes = useStyles();
 
   return (
@@ -19,7 +19,6 @@ export default function Layout({ children }) {
       <Head>
         <title>next shop</title>
         <meta content="Next.js ทดสอบ" name="description"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <Box sx={{ flexGrow: 1 }}>
@@ -34,10 +33,21 @@ export default function Layout({ children }) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Next Shop
-            </Typography>
-            <Button color="inherit">Login</Button>
+            <NextLink href="/" passHref>
+              <Link>
+                <Typography className={classes.brand}>Next Shop</Typography>
+              </Link>
+            </NextLink>
+
+            <div className={classes.grow}></div>
+            <div>
+              <NextLink href="/cart" passHref>
+                <Link>Cart</Link>
+              </NextLink>
+              <NextLink href="/login" passHref>
+                <Link>Login</Link>
+              </NextLink>
+            </div>
           </Toolbar>
         </AppBar>
       </Box>
