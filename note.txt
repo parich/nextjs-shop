@@ -16,7 +16,7 @@
 - nvm use <node version> คำสั่งนี้เป็นการใช้ node version ใดใดก็ตามที่อยู่ในเครื่อง
 
 
-# created nextjs
+# install nextjs
 - npx create-next-app
 - npm run dev
 

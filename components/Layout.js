@@ -11,12 +11,14 @@ import { Container } from '@mui/material';
 import useStyles from '../utils/styles';
 
 export default function Layout({ children }) {
+  
   const classes = useStyles();
 
   return (
     <div>
       <Head>
         <title>next shop</title>
+        <meta content="Next.js ทดสอบ" name="description"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 

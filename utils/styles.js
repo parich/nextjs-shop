@@ -2,7 +2,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   navbar: {
-    background: '#203040',
+    backgroundColor: '#203040',
     '& a': {
       color: '#ffffff',
       marginLeft: 10,
@@ -15,5 +15,4 @@ const useStyles = makeStyles({
     textAlign: 'center',
   },
 });
-
 export default useStyles;
