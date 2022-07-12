@@ -5,12 +5,14 @@ import {
   CardActions,
   CardContent,
   Grid,
+  Link,
   Typography,
 } from '@mui/material';
 
 import Image from 'next/image';
 import Layout from '../components/Layout';
 import data from '../utils/data';
+import NextLink from 'next/link';
 
 export default function Home() {
   return (
@@ -22,20 +24,22 @@ export default function Home() {
           {data.products.map((product) => (
             <Grid item md={4} key={product.name}>
               <Card>
-                <CardActionArea>
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    title={product.name}
-                    width={500}
-                    height={500}
-                  />
-                  <CardContent>
-                    <Typography variant="body2" color="text.secondary">
-                      {product.name}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
+                <NextLink href={`/product/${product.slug}`} passHref>
+                  <CardActionArea>
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      title={product.name}
+                      width={500}
+                      height={500}
+                    />
+                    <CardContent>
+                      <Typography variant="body2" color="text.secondary">
+                        {product.name}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </NextLink>
 
                 <CardActions>
                   <Typography>{product.price}</Typography>
