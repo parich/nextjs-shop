@@ -5,7 +5,6 @@ import {
   CardActions,
   CardContent,
   Grid,
-  Link,
   Typography,
 } from '@mui/material';
 
@@ -16,7 +15,10 @@ import NextLink from 'next/link';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout
+      title="แนวข้อสอบราชการ"
+      description="แนวข้อสอบราชการ รวมแนวข้อสอบ เนื้อหา ข้อสอบ เฉลย สำหรับเตรียมสอบงานราชการ"
+    >
       <div>
         <h1>Products</h1>
 

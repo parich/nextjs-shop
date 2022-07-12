@@ -4,21 +4,20 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Container, Link } from '@mui/material';
 import useStyles from '../utils/styles';
 import NextLink from 'next/link';
 
-export default function Layout({ children }) {
+export default function Layout({ title, description, children }) {
   const classes = useStyles();
 
   return (
     <div>
       <Head>
-        <title>next shop</title>
-        <meta content="Next.js ทดสอบ" name="description"></meta>
+        <title>{title ? `${title} - next shop` : 'next shop'}</title>
+        {description && <meta content={description} name="description"></meta>}
       </Head>
 
       <Box sx={{ flexGrow: 1 }}>
