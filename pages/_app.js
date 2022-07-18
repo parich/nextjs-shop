@@ -1,8 +1,8 @@
 import '../styles/globals.css';
 import { useEffect } from 'react';
+import { StoreProvider } from '../utils/Store';
 
-function MyApp({ Component, pageProps }) {
-  
+export default function App({ Component, pageProps }) {
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <StoreProvider>
+      <Component {...pageProps} />
+    </StoreProvider>
+  );
 }
-
-export default MyApp;

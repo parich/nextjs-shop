@@ -15,10 +15,7 @@ import NextLink from 'next/link';
 
 export default function Home() {
   return (
-    <Layout
-      title="แนวข้อสอบราชการ"
-      description="แนวข้อสอบราชการ รวมแนวข้อสอบ เนื้อหา ข้อสอบ เฉลย สำหรับเตรียมสอบงานราชการ"
-    >
+    <Layout title="shop by next js" description="shop by next js">
       <div>
         <h1>Products</h1>
 
