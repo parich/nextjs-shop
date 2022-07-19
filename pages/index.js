@@ -18,7 +18,6 @@ export default function Home() {
     <Layout title="shop by next js" description="shop by next js">
       <div>
         <h1>Products</h1>
-
         <Grid container spacing={3}>
           {data.products.map((product) => (
             <Grid item md={4} key={product.name}>
