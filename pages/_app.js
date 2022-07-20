@@ -1,18 +1,17 @@
-import '../styles/globals.css';
-import { useEffect } from 'react';
 import { StoreProvider } from '../utils/Store';
+import { CacheProvider } from '@emotion/react';
+import createEmotionCache from '../utils/createEmotionCache';
 
-export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }, []);
+const clientSideEmotionCache = createEmotionCache();
+
+export default function App(props) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   return (
-    <StoreProvider>
-      <Component {...pageProps} />
-    </StoreProvider>
+    <CacheProvider value={emotionCache}>
+      <StoreProvider>
+        <Component {...pageProps} />
+      </StoreProvider>
+    </CacheProvider>
   );
 }

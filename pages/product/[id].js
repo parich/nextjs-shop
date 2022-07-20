@@ -3,10 +3,10 @@ import db from '../../../utils/db';
 
 const handler = async (req, res) => {
   await db.connect();
-  const products = await Product.find({});
+  const product = await Product.findById(req.query.id);
   await db.disconnect();
   //res.send({ message: "seeded successfully" });
-  res.send({ products });
+  res.send({ product });
 };
 
 export default handler;
